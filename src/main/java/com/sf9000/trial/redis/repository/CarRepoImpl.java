@@ -16,7 +16,7 @@ public class CarRepoImpl implements CarRepo {
 
 	@Override
 	public void save(Car car) {
-		this.redisTemplate.opsForHash().put(CAR_KEY, car.getId(), car);
+		this.redisTemplate.opsForHash().put(CAR_KEY, car.getRegistration(), car);
 	}
 
 	@Override
